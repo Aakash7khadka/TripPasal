@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<div class="jumbotron main-banner" style="height: 500px; "> 
+    <div class="row align-items-center">
+        <div class="col-md-4 offset-1">
+          
+            <h1 class="display-4 text-dark">Find your destination</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <form class="form-inline  my-lg-0 ">
+            
+            <input
+              class="form-control mr-sm-2 "
+              style="width: 250px;font-family:FontAwesome"
+              type="search"
+              placeholder="&#xf21d From"
+              aria-label="Search"
+            />
+                      </form>
+          
+          <form class="form-inline my-lg-0 ">
+            <input
+              class="form-control  mt-4"
+              style="width: 250px;font-family:FontAwesome"
+              type="search"
+              placeholder="&#xf3c5 To "
+              aria-label="Search"
+            />
+            <div class="mysearch" >
+            <button class="btn  btn-light my-2 my-sm-0 "  style="" type="submit">
+              <i class="fas fa-search" style="color:#4abcad ;"></i> 
+            </button>
+        </div>
+          </form>
+        
+
+        </div>
+       
+      </div>
+
+    </div>
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <div class="media">
+                    <i class="fas fa-building " style="font-size: 70px;color: #ff491b;"></i>
+                  
+                <div class="media-body">
+                <h3> Hotels</h3>
+                <p> Choose best hotels with great price. Bargain and save for more fun</p>
+            </div>
+        </div>  
+        </div>
+            <div class="col-md">
+                <div class="media">
+                    <i class="fas fa-plane-departure" style="font-size: 50px;color: #ff491b;"></i>
+           
+                <div class="media-body">
+                <h3> Flights</h3>
+                <p> Best flight selection with fascinating discounts with great quality.</p>
+            </div>
+        </div>
+            </div>
+            <div class="col-md">
+                <div class="media">
+                    <i class="fas fa-taxi " style="font-size: 60px;color: #ff491b;"></i>
+            
+                <div class="media-body">
+                <h3> Cab</h3>
+                <p> Best flight selection with fascinating discounts with great quality.</p>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+<div class="container mt-4">
+<h4 class="text-muted">Popular today</h4>
+<div class="card-deck">
+<div class="card popularcard">
+<img class="card-img-top h-30" src="https://lh3.googleusercontent.com/p/AF1QipN8O0oEYZTP1KpZ8wQrerf67Kx3Hgn6DihfQkIX=w296-h202-n-k-rw-no-v1" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Himalaya Front Hotel, Pokhara</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+<div class="card popularcard ">
+<img class="card-img-top h-30" src="https://lh3.googleusercontent.com/p/AF1QipOhQ3EV0_zWAwWIMPTzv94TQgWN1mt2bBlpWceY=w296-h202-n-k-rw-no-v1" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Temple Tree Resort, Pokhara</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+<div class="card popularcard"  >
+<img class="card-img-top h-30" src="data:image/jpeg;base64,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" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Buddha Air,KTM-Lumbini</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+<div class="card popularcard">
+<img class="card-img-top h-30" src="https://lh3.googleusercontent.com/p/AF1QipN8O0oEYZTP1KpZ8wQrerf67Kx3Hgn6DihfQkIX=w296-h202-n-k-rw-no-v1" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Himalaya Front Hotel, Pokhara</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+<div class="card popularcard">
+<img class="card-img-top h-30" src="https://lh3.googleusercontent.com/p/AF1QipN8O0oEYZTP1KpZ8wQrerf67Kx3Hgn6DihfQkIX=w296-h202-n-k-rw-no-v1" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Himalaya Front Hotel, Pokhara</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+<div class="container mt-4">
+<h4 class="text-muted">Recommendation</h4>
+<div class="card-deck">
+<div class="card popularcard">
+<img class="card-img-top h-30" src="https://lh3.googleusercontent.com/p/AF1QipN8O0oEYZTP1KpZ8wQrerf67Kx3Hgn6DihfQkIX=w296-h202-n-k-rw-no-v1" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Himalaya Front Hotel, Pokhara</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+<div class="card popularcard ">
+<img class="card-img-top h-30" src="https://lh3.googleusercontent.com/p/AF1QipOhQ3EV0_zWAwWIMPTzv94TQgWN1mt2bBlpWceY=w296-h202-n-k-rw-no-v1" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Temple Tree Resort, Pokhara</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+<div class="card popularcard"  >
+<img class="card-img-top h-30" src="data:image/jpeg;base64,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" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Buddha Air,KTM-Lumbini</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+<div class="card popularcard">
+<img class="card-img-top h-30" src="https://lh3.googleusercontent.com/p/AF1QipN8O0oEYZTP1KpZ8wQrerf67Kx3Hgn6DihfQkIX=w296-h202-n-k-rw-no-v1" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Himalaya Front Hotel, Pokhara</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+<div class="card popularcard">
+<img class="card-img-top h-30" src="https://lh3.googleusercontent.com/p/AF1QipN8O0oEYZTP1KpZ8wQrerf67Kx3Hgn6DihfQkIX=w296-h202-n-k-rw-no-v1" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Himalaya Front Hotel, Pokhara</h5>
+  <p class="card-text">Perfect price and worthy with it's amazing service and aroma near lake side</p>
+  <p class="card-text"><small class="text-muted">
+    <i class="fas fa-star text-warning"></i>
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i>  
+    <i class="fas fa-star text-warning"></i> 
+    <i class="fas fa-star-half text-warning"></i>  
+    4.5 (250)</small class="text-muted"></p>
+    
+    <p class="ml-2">  <small class="ml-4 " style="text-decoration: line-through;">(Rs 3200) </small>Rs 2500</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous"
+></script>
+
+
+{% endblock%}

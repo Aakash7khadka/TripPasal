@@ -1,0 +1,39 @@
+.mysearch {
+  margin-top: 23px;
+}
+.input-wrapper1 {
+  position: relative;
+  width: 200px;
+}
+
+.input-wrapper1:before,
+.input-wrapper2 {
+  content: "\f21d";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #459ce7;
+  font-size: 25px;
+  margin-right: -40px;
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+.main-banner {
+  background-image: url('images/coverf.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.midbanner {
+  background: rgb(50, 46, 45);
+  background: linear-gradient(
+    90deg,
+    rgba(50, 46, 45, 1) 0%,
+    rgba(74, 188, 173, 1) 74%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.popularcard p {
+  font-size: 15px;
+}
