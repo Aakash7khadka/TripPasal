@@ -8,5 +8,7 @@ def homepage(request):
 def hotel(request):
     return render(request,'hotel.html')
 
+
+
 def flight(request):
     return render(request,'flight.html')

@@ -1,0 +1,14 @@
+{% extends 'flight.html' %}
+{% block compareflight %}
+
+
+{% for obj in plane %}
+
+
+{% include 'flightcard.html' with instance=obj %}
+
+
+<h1>second test</h1>
+{{obj.price}} <br>
+{% endfor %}
+{% endblock %}

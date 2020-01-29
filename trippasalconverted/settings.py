@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'social_django',
+    'flight',
 ]
 
 AUTHENTICATION_BACKENDS=(
