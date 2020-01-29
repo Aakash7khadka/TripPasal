@@ -37,7 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'homepage',
+    'social_django',
 ]
+
+AUTHENTICATION_BACKENDS=(
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -47,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware', 
 ]
 
 ROOT_URLCONF = 'trippasalconverted.urls'
@@ -62,6 +71,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -75,12 +86,18 @@ WSGI_APPLICATION = 'trippasalconverted.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'trippasal',
+        'USER':'postgres',
+        'PASSWORD':'1234',
+        'HOST':'localhost'
     }
 }
-
-
+LOGIN_REDIRECT_URL='/'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY='1003519261900-klcasblkfpq0rvck6f4j4ov15qshsj17.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET='mwn-uoGzw6c-51AhcJxU0Gc9'
+SOCIAL_AUTH_KEY='ID'
+SOCIAL_AUTH__SECRET='SECRET '
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -124,3 +141,5 @@ STATICFILES_DIRS=[
 STATIC_ROOT=os.path.join(BASE_DIR,'assets')
 MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
