@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+      float: left;
+    }
 
-.price {
-  color: grey;
-  font-size: 22px;
-}
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
 
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
+    .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
 
-.card button:hover {
-  opacity: 0.7;
-}
-</style>
+    .card button:hover {
+      opacity: 0.7;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2 style="text-align:center">Product Card</h2>
-
-<div class="card">
-  <img src="1.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Kathmandu</h1>
-  <p class="price">Rs {{obj.price}} per person</p>
-  <p>From:{{obj.source}}</p>
-  <p>To:{{obj.destination}}</p>
-  <p><button>View Description</button></p>
-</div>
+  <div class="container mt-4">
+    <div class="card mx-2 my-4 ">
+      <img src="1.jpg" alt="Denim Jeans" style="width:100%">
+      <h3>{{obj.airlines_name}} <span class="text-muted" style="font-size: 15px;">airlines</span></h3>
+      <p class="price">Rs {{obj.price}} per person</p>
+      <p>From:{{obj.source}}</p>
+      <p>To:{{obj.destination}}</p>
+      <p><button>View Description</button></p>
+    </div>
+  </div>
 
 </body>
+
 </html>
