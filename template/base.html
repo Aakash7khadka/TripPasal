@@ -1,240 +1,190 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <script
-      src="https://kit.fontawesome.com/7678408c0c.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Trippasal</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-      <a class="navbar-brand" href="{% url 'homepage'%}"
-        ><i
-          class="fas fa-suitcase-rolling"
-          style="color: #ff491b;font-size:30px;"
-        ></i
-        ><span style="color:#4abcad;font-size: 30px;font-weight: 700;"
-          >Trip</span
-        ><span
-          style="color:
-        #ff491b"
-          >pasal</span
-        ></a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <script src="https://kit.fontawesome.com/7678408c0c.js" crossorigin="anonymous"></script>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <a class="btn btn-light mx-3 " href="{% url 'hotel' %}" role="button"
-            ><i class="fas fa-door-open " style="color:#4abcad"></i> Find
-            Hotel</a
-          >
-          <a class="btn btn-light mx-3 " href="#" role="button"
-            ><i class="fas fa-folder-plus" style="color:#4abcad"></i> Add
-            Hotel</a
-          >
-          <a class="btn btn-light mx-3 " href="{% url 'flight' %}" role="button"
-            ><i class="fas fa-plane-departure" style="color:#4abcad"></i>
-            Flight</a
-          >
-          <a class="btn btn-light mx-3 " href="#" role="button"
-            ><i class="fas fa-taxi" style="color:#4abcad"></i> Find Cab</a
-          >
-          <a class="btn btn-light mx-3 " href="{% url 'social:begin' 'google-oauth2' %}" role="button"
-            ><i class="fas fa-taxi" style="color:#4abcad"></i> LOGIN WITH GOOGLE</a
-          >
+  <title>Trippasal</title>
+</head>
 
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <i class="fas fa-list-ul" style="color:#4abcad"></i> Services
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Hotels</a>
-              <a class="dropdown-item" href="#">Cab</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Restaurants</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn  my-2 my-sm-0"  style="border-color:#4abcad; type="submit">
-            <i class="fas fa-search" style="color:#4abcad ;"></i> 
-          </button>
-        </form>
-        <a class="btn btn-light mx-2" href="#" role="button">Login</a>
-        <a
-          class="btn  mx-2"
-          href="#"
-          role="button"
-          style="background-color:#4abcad;color: aliceblue;"
-          >Sign Up</a
-        >
-      </div>
-    </nav>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand" href="{% url 'homepage'%}"><i class="fas fa-suitcase-rolling"
+        style="color: #ff491b;font-size:30px;"></i><span
+        style="color:#4abcad;font-size: 30px;font-weight: 700;">Trip</span><span style="color:
+        #ff491b">pasal</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!--
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <a class="btn btn-light mx-3 " href="{% url 'hotel' %}" role="button"><i class="fas fa-door-open "
+            style="color:#4abcad"></i> Find
+          Hotel</a>
+        <a class="btn btn-light mx-3 " href="#" role="button"><i class="fas fa-folder-plus" style="color:#4abcad"></i>
+          Add
+          Hotel</a>
+        <a class="btn btn-light mx-3 " href="{% url 'flight' %}" role="button"><i class="fas fa-plane-departure"
+            style="color:#4abcad"></i>
+          Flight</a>
+        <a class="btn btn-light mx-3 " href="#" role="button"><i class="fas fa-taxi" style="color:#4abcad"></i> Find
+          Cab</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-list-ul" style="color:#4abcad"></i> Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Hotels</a>
+            <a class="dropdown-item" href="#">Cab </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Restaurants</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn  my-2 my-sm-0" style="border-color:#4abcad; type=" submit">
+          <i class="fas fa-search" style="color:#4abcad ;"></i>
+        </button>
+      </form>
+      <a class="btn btn-light mx-2" href="#" role="button">Login</a>
+      <a class="btn  mx-2 " style="background-color:#ff491b;color:aliceblue"
+        href="{% url 'social:begin' 'google-oauth2' %}" role="button"><i class="fab fa-google"></i> Sign Up</a>
+    </div>
+  </nav>
+
+  <!--
           yeta lekha extend ko laagi
       -->
 
 
 
 
-{% block content %}
+  {% block content %}
 
 
-{% endblock %}
+  {% endblock %}
 
 
 
 
-<!-- Footer -->
-<footer class="page-footer font-small blue pt-4 ">
 
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left text-light" style="background: #3e4552;">
-  
-      <!-- Grid row -->
-      <div class="row">
-  
-        <!-- Grid column -->
-        <div class="col-md-4 mt-md-0 mt-3">
-  
-          <!-- Content -->
-          <h5 class="text-uppercase">Trippasal.com.np</h5>
-          <p>
-              Here you can find and compare among many 
-              hotels,flights and cabs.This is a complete 
-              tourist guide website where you can save your 
+  <!-- Footer -->
+  <div class="basefooter" style="margin-top:800px ">
+    <footer class=" page-footer font-small blue pt-4 mt-4">
+
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left text-light" style="background: #3e4552;">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-4 mt-md-0 mt-3">
+
+            <!-- Content -->
+            <h5 class="text-uppercase">Trippasal.com.np</h5>
+            <p>
+              Here you can find and compare among many
+              hotels,flights and cabs.This is a complete
+              tourist guide website where you can save your
               time and money.
-            
+
             </p>
-  
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none pb-3">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
         </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none pb-3">
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-  
-          <!-- Links -->
-          <h5 class="text-uppercase">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-  
-          <!-- Links -->
-          <h5 class="text-uppercase">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
+        <!-- Grid row -->
+
       </div>
-      <!-- Grid row -->
-  
-    </div>
-    <!-- Footer Links -->
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="index.html"> trippasal.com.np</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="index.html"> trippasal.com.np</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+  </div>
   <!-- Footer -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>
