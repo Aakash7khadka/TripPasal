@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 AUTHENTICATION_BACKENDS=(
     'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.github.GithubOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -94,9 +95,13 @@ DATABASES = {
         'HOST':'localhost'
     }
 }
+LOGIN_URL='login'
+LOGOUT_URL='logout'
 LOGIN_REDIRECT_URL='/'
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY='1003519261900-klcasblkfpq0rvck6f4j4ov15qshsj17.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET='mwn-uoGzw6c-51AhcJxU0Gc9'
+SOCIAL_AUTH_GITHUB_KEY = '56e5deaa46dc24dc445d'
+SOCIAL_AUTH_GITHUB_SECRET = '2c6b3f1fbfefae220024a10042e87e1bed5c2a3c'
 SOCIAL_AUTH_KEY='ID'
 SOCIAL_AUTH__SECRET='SECRET '
 # Password validation
