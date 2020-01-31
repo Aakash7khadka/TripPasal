@@ -22,7 +22,7 @@
       outline: 0;
       padding: 12px;
       color: white;
-      background-color: #000;
+      background-color: #ff491b;
       text-align: center;
       cursor: pointer;
       width: 100%;
@@ -31,6 +31,10 @@
 
     .card button:hover {
       opacity: 0.7;
+    }
+
+    .price {
+      font-size: 16px;
     }
   </style>
 </head>
@@ -41,9 +45,16 @@
     <div class="card mx-2 my-4 ">
       <img src="1.jpg" alt="Denim Jeans" style="width:100%">
       <h3>{{obj.airlines_name}} <span class="text-muted" style="font-size: 15px;">airlines</span></h3>
-      <p class="price">Rs {{obj.price}} per person</p>
-      <p>From:{{obj.source}}</p>
-      <p>To:{{obj.destination}}</p>
+      <p class="price"><span style="color:#ff491b;">Rs {{obj.price}}</span> per person
+        <br>
+        <span style="font-size: 12px;"><strike>Rs 2500</strike> -15%</span>
+      </p>
+      <p>From:{{obj.source}} <br>
+        To: &nbsp;&nbsp;&nbsp;{{obj.destination}}
+        <br>
+        <span class="text-muted" style="font-size: 15px;">Depart: 7:30 am</span>
+      </p>
+
       <p><button>View Description</button></p>
     </div>
   </div>
