@@ -70,6 +70,7 @@
       
      
         {% if user.is_authenticated %}
+        Welcome {{user.get_username}}!
         <a class="btn btn-light mx-2" href="{% url 'logout' %}" role="button">Logout</a>
         {% endif %}
     </div>
