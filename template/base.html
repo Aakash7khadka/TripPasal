@@ -59,9 +59,20 @@
           <i class="fas fa-search" style="color:#4abcad ;"></i>
         </button>
       </form>
-      <a class="btn btn-light mx-2" href="#" role="button">Login</a>
+      
+      
+      {% if not user.is_authenticated %}
       <a class="btn  mx-2 " style="background-color:#ff491b;color:aliceblue"
-        href="{% url 'social:begin' 'google-oauth2' %}" role="button"><i class="fab fa-google"></i> Sign Up</a>
+      href="{% url 'social:begin' 'google-oauth2' %}" role="button"><i class="fab fa-google"></i> Login with Google</a>
+      <a class="btn  mx-2 " style="background-color:#24292e;color:aliceblue"
+      href="{% url 'social:begin' 'github' %}" role="button"><i class="fab fa-github"></i> Login with GitHub</a>
+        {% endif %}
+      
+     
+        {% if user.is_authenticated %}
+        Welcome {{user.get_username}}!
+        <a class="btn btn-light mx-2" href="{% url 'logout' %}" role="button">Logout</a>
+        {% endif %}
     </div>
   </nav>
 
