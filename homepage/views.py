@@ -1,4 +1,10 @@
 from django.shortcuts import render
+from django.contrib.auth import logout as auth_logout
+
+def logout(request):
+    """Logs out user"""
+    auth_logout(request)
+    return render(request,'home.html')
 
 # Create your views here.
 def homepage(request):

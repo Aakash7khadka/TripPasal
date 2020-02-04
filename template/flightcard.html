@@ -36,6 +36,12 @@
     .price {
       font-size: 16px;
     }
+
+    .card img {
+      height: 100px;
+      width: 200px;
+
+    }
   </style>
 </head>
 
@@ -43,7 +49,14 @@
 
   <div class="container mt-4">
     <div class="card mx-2 my-4 ">
-      <img src="1.jpg" alt="Denim Jeans" style="width:100%">
+      {% if obj.airlines_name == "Yeti"  %}
+      <img src="https://www.yetiairlines.com/file-manager/photos/2/1.jpg" alt="Yeti photo">
+      {% elif obj.airlines_name == "Buddha" %}
+      <img src="https://aviationnepal.com/wp-content/uploads/2017/03/2-Copy-Copy.jpg" alt="Yeti photo"
+        style="max-width:300px;max-height:100px">
+      {% else %}
+      <img src="" alt="" style="width:100%">
+      {% endif %}
       <h3>{{obj.airlines_name}} <span class="text-muted" style="font-size: 15px;">airlines</span></h3>
       <p class="price"><span style="color:#ff491b;">Rs {{obj.price}}</span> per person
         <br>
