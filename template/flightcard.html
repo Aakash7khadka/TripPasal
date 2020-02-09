@@ -60,12 +60,12 @@
       <h3>{{obj.airlines_name}} <span class="text-muted" style="font-size: 15px;">airlines</span></h3>
       <p class="price"><span style="color:#ff491b;">Rs {{obj.price}}</span> per person
         <br>
-        <span style="font-size: 12px;"><strike>Rs 2500</strike> -15%</span>
+        <span style="font-size: 12px;"><strike>Rs {{obj.cutprice}}</strike> -10%</span>
       </p>
       <p>From:{{obj.source}} <br>
         To: &nbsp;&nbsp;&nbsp;{{obj.destination}}
         <br>
-        <span class="text-muted" style="font-size: 15px;">Depart: 7:30 am</span>
+        <span class="text-muted" style="font-size: 15px;">{{obj.depart_time}}</span>
       </p>
 
       <p><button>View Description</button></p>
