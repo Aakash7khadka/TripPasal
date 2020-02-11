@@ -24,6 +24,7 @@ urlpatterns = [
     
     path('',include('homepage.urls')),
     path('flight/',include('flight.urls')),
+    path('addhotels/',include('hotels.urls')),
     
 ]
 urlpatterns=urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

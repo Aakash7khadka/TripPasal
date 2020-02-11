@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'homepage',
     'social_django',
     'flight',
+    'hotels',
 ]
 
 AUTHENTICATION_BACKENDS = (

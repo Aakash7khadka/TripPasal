@@ -14,7 +14,8 @@ def homepage(request):
 def hotel(request):
     return render(request,'hotel.html')
 
-
+def addhotels(request):
+    return render(request,'addhotel.html')
 
 def flight(request):
     return render(request,'flight.html')
