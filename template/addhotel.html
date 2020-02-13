@@ -1,12 +1,115 @@
 {% extends 'base.html' %}
 
 {% block content %}
- <form action="add">
-    <select name="destination" id="">
-        <option value="kathmandu">Kathmandu</option>
-        <option value="pokhara">Pokhara</option>
-    </select>
-    <button type="submit">Submit</button>
- </form>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <form action="add">
+                <div class="card ml-4 mt-4" style="width: 12rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">OYO</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Add hotels</h6>
+
+                        <select name="destination" class="form-control mr-sm-2 mt-4 mb-2 "
+                            style="width: 150px;font-family:FontAwesome" type="text" placeholder="&#xf21d From"
+                            aria-label="Search" name="first_dest" id="">
+                            <option value="">From</option>
+                            <option value="kathmandu">kathmandu</option>
+                            <option value="pokhara">pokhara</option>
+                            <option value="lukla">lukla</option>
+                            <option value="pokhara">pokhara</option>
+                            <option value="jomsom">jomsom</option>
+                            <option value="bhadrapur">bhadrapur</option>
+                            <option value="biratnagar">biratnagar</option>
+                            <option value="bhojpur">bhojpur</option>
+                            <option value="dhangadi">dhangadi</option>
+                            <option value="tumlingtar">tumlingtar</option>
+                        </select>
+
+                        <button class="btn  btn-info my4- my-sm-0 " style="" type="submit">
+                            Add
+                        </button>
+
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="col-sm">
+            <form action="add">
+                <div class="card ml-4 mt-4" style="width: 13rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Makemytrip.com</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Add hotels</h6>
+
+                        <select name="destination" class="form-control mr-sm-2 mt-4 mb-2 "
+                            style="width: 150px;font-family:FontAwesome" type="text" placeholder="&#xf21d From"
+                            aria-label="Search" name="first_dest" id="">
+                            <option value="">From</option>
+                            <option value="kathmandu">kathmandu</option>
+                            <option value="pokhara">pokhara</option>
+                            <option value="lukla">lukla</option>
+                            <option value="pokhara">pokhara</option>
+                            <option value="jomsom">jomsom</option>
+                            <option value="bhadrapur">bhadrapur</option>
+                            <option value="biratnagar">biratnagar</option>
+                            <option value="bhojpur">bhojpur</option>
+                            <option value="dhangadi">dhangadi</option>
+                            <option value="tumlingtar">tumlingtar</option>
+                        </select>
+
+                        <button class="btn  btn-info my4- my-sm-0 " style="" type="submit">
+                            Add
+                        </button>
+
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="col-sm">
+            <form action="add">
+                <div class="card ml-4 mt-4" style="width: 12rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Other</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Add hotels</h6>
+
+                        <select name="destination" class="form-control mr-sm-2 mt-4 mb-2 "
+                            style="width: 150px;font-family:FontAwesome" type="text" placeholder="&#xf21d From"
+                            aria-label="Search" name="first_dest" id="">
+                            <option value="">From</option>
+                            <option value="kathmandu">kathmandu</option>
+                            <option value="pokhara">pokhara</option>
+                            <option value="lukla">lukla</option>
+                            <option value="pokhara">pokhara</option>
+                            <option value="jomsom">jomsom</option>
+                            <option value="bhadrapur">bhadrapur</option>
+                            <option value="biratnagar">biratnagar</option>
+                            <option value="bhojpur">bhojpur</option>
+                            <option value="dhangadi">dhangadi</option>
+                            <option value="tumlingtar">tumlingtar</option>
+                        </select>
+
+                        <button class="btn  btn-info my4- my-sm-0 " style="" type="submit">
+                            Add
+                        </button>
+
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+{% block hotelsuccess %}
+
+{% endblock %}
+
 
 {% endblock %}
