@@ -2,109 +2,232 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-            <form action="add">
-                <div class="card ml-4 mt-4" style="width: 12rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">OYO</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Add hotels</h6>
 
-                        <select name="destination" class="form-control mr-sm-2 mt-4 mb-2 "
-                            style="width: 150px;font-family:FontAwesome" type="text" placeholder="&#xf21d From"
-                            aria-label="Search" name="first_dest" id="">
-                            <option value="">From</option>
-                            <option value="kathmandu">kathmandu</option>
-                            <option value="pokhara">pokhara</option>
-                            <option value="lukla">lukla</option>
-                            <option value="pokhara">pokhara</option>
-                            <option value="jomsom">jomsom</option>
-                            <option value="bhadrapur">bhadrapur</option>
-                            <option value="biratnagar">biratnagar</option>
-                            <option value="bhojpur">bhojpur</option>
-                            <option value="dhangadi">dhangadi</option>
-                            <option value="tumlingtar">tumlingtar</option>
-                        </select>
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        {% if request.user.is_superuser %}
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+            aria-controls="nav-home" aria-selected="true">Admin add hotel</a>
+        {% endif %}
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+            aria-controls="nav-profile" aria-selected="false">Add Hotel</a>
 
-                        <button class="btn  btn-info my4- my-sm-0 " style="" type="submit">
-                            Add
-                        </button>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    {% if request.user.is_superuser %}
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
-                    </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <form action="add">
+                        <div class="card ml-4 mt-4" style="width: 12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">OYO</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Add hotels</h6>
+
+                                <select name="destination" class="form-control mr-sm-2 mt-4 mb-2 "
+                                    style="width: 150px;font-family:FontAwesome" type="text" placeholder="&#xf21d From"
+                                    aria-label="Search" name="first_dest" id="">
+                                    <option value="">From</option>
+                                    <option value="kathmandu">kathmandu</option>
+                                    <option value="pokhara">pokhara</option>
+                                    <option value="lukla">lukla</option>
+                                    <option value="pokhara">pokhara</option>
+                                    <option value="jomsom">jomsom</option>
+                                    <option value="bhadrapur">bhadrapur</option>
+                                    <option value="biratnagar">biratnagar</option>
+                                    <option value="bhojpur">bhojpur</option>
+                                    <option value="dhangadi">dhangadi</option>
+                                    <option value="tumlingtar">tumlingtar</option>
+                                </select>
+
+                                <button class="btn  btn-info my4- my-sm-0 " style="" type="submit">
+                                    Add
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </form>
+
                 </div>
+                <div class="col-sm">
+                    <form action="addtrivago">
+                        <div class="card ml-4 mt-4" style="width: 13rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Trivago.com</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Add hotels</h6>
 
-            </form>
+                                <select name="destination" class="form-control mr-sm-2 mt-4 mb-2 "
+                                    style="width: 150px;font-family:FontAwesome" type="text" placeholder="&#xf21d From"
+                                    aria-label="Search" name="first_dest" id="">
+                                    <option value="">From</option>
+                                    <option value="kathmandu">kathmandu</option>
+                                    <option value="pokhara">pokhara</option>
+                                    <option value="lukla">lukla</option>
+                                    <option value="pokhara">pokhara</option>
+                                    <option value="jomsom">jomsom</option>
+                                    <option value="bhadrapur">bhadrapur</option>
+                                    <option value="biratnagar">biratnagar</option>
+                                    <option value="bhojpur">bhojpur</option>
+                                    <option value="dhangadi">dhangadi</option>
+                                    <option value="tumlingtar">tumlingtar</option>
+                                </select>
 
-        </div>
-        <div class="col-sm">
-            <form action="addtrivago">
-                <div class="card ml-4 mt-4" style="width: 13rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Trivago</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Add hotels</h6>
+                                <button class="btn  btn-info my4- my-sm-0 " style="" type="submit">
+                                    Add
+                                </button>
 
-                        <select name="destination" class="form-control mr-sm-2 mt-4 mb-2 "
-                            style="width: 150px;font-family:FontAwesome" type="text" placeholder="&#xf21d From"
-                            aria-label="Search" name="first_dest" id="">
-                            <option value="">From</option>
-                            <option value="kathmandu">kathmandu</option>
-                            <option value="pokhara">pokhara</option>
-                            <option value="lukla">lukla</option>
-                            <option value="pokhara">pokhara</option>
-                            <option value="jomsom">jomsom</option>
-                            <option value="bhadrapur">bhadrapur</option>
-                            <option value="biratnagar">biratnagar</option>
-                            <option value="bhojpur">bhojpur</option>
-                            <option value="dhangadi">dhangadi</option>
-                            <option value="tumlingtar">tumlingtar</option>
-                        </select>
+                            </div>
+                        </div>
 
-                        <button class="btn  btn-info my4- my-sm-0 " style="" type="submit">
-                            Add
-                        </button>
+                    </form>
 
-                    </div>
                 </div>
+                <div class="col-sm">
+                    <form action="add">
+                        <div class="card ml-4 mt-4" style="width: 12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Other</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Add hotels</h6>
 
-            </form>
+                                <select name="destination" class="form-control mr-sm-2 mt-4 mb-2 "
+                                    style="width: 150px;font-family:FontAwesome" type="text" placeholder="&#xf21d From"
+                                    aria-label="Search" name="first_dest" id="">
+                                    <option value="">From</option>
+                                    <option value="kathmandu">kathmandu</option>
+                                    <option value="pokhara">pokhara</option>
+                                    <option value="lukla">lukla</option>
+                                    <option value="pokhara">pokhara</option>
+                                    <option value="jomsom">jomsom</option>
+                                    <option value="bhadrapur">bhadrapur</option>
+                                    <option value="biratnagar">biratnagar</option>
+                                    <option value="bhojpur">bhojpur</option>
+                                    <option value="dhangadi">dhangadi</option>
+                                    <option value="tumlingtar">tumlingtar</option>
+                                </select>
 
-        </div>
-        <div class="col-sm">
-            <form action="add">
-                <div class="card ml-4 mt-4" style="width: 12rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Other</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Add hotels</h6>
+                                <button class="btn  btn-info my4- my-sm-0 " style="" type="submit">
+                                    Add
+                                </button>
 
-                        <select name="destination" class="form-control mr-sm-2 mt-4 mb-2 "
-                            style="width: 150px;font-family:FontAwesome" type="text" placeholder="&#xf21d From"
-                            aria-label="Search" name="first_dest" id="">
-                            <option value="">From</option>
-                            <option value="kathmandu">kathmandu</option>
-                            <option value="pokhara">pokhara</option>
-                            <option value="lukla">lukla</option>
-                            <option value="pokhara">pokhara</option>
-                            <option value="jomsom">jomsom</option>
-                            <option value="bhadrapur">bhadrapur</option>
-                            <option value="biratnagar">biratnagar</option>
-                            <option value="bhojpur">bhojpur</option>
-                            <option value="dhangadi">dhangadi</option>
-                            <option value="tumlingtar">tumlingtar</option>
-                        </select>
+                            </div>
+                        </div>
 
-                        <button class="btn  btn-info my4- my-sm-0 " style="" type="submit">
-                            Add
-                        </button>
+                    </form>
 
-                    </div>
                 </div>
-
-            </form>
-
+            </div>
         </div>
     </div>
+    {% endif %}
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="container mt-4 pb-4 pt-4"
+            style="  box-shadow: 5px 10px 8px 10px #888888;width: 450px;background-color:white;border-radius:16px;">
+            <h4 class="pl-2 pt-3" style="
+                box-shadow: 2.5px 5px 4px 5px #888888;
+                border-radius: 12px;
+                font-weight:700;
+                width:420px;background-color: orangered;height:50px;color:whitesmoke;font-size:larger">Add
+                Hotel</h4>
+            <form>
+                <div class="form-group mt-4">
+                    <label>Hotel Name</label>
+                    <input type="text" class="form-control" id="hotel_name" aria-describedby="emai">
+                    <small id="namehelp" class="form-text text-muted">Give authentic and appropriate original
+                        name.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputText">Address</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                    <small id="addresshelp" class="form-text text-muted">Give appropriate address.</small>
+                </div>
+                <div class="form-group ">
+                    <label for="inputState">City</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option value="kathmandu">kathmandu</option>
+                        <option value="pokhara">pokhara</option>
+                        <option value="lukla">lukla</option>
+                        <option value="pokhara">pokhara</option>
+                        <option value="jomsom">jomsom</option>
+                        <option value="bhadrapur">bhadrapur</option>
+                        <option value="biratnagar">biratnagar</option>
+                        <option value="bhojpur">bhojpur</option>
+                        <option value="dhangadi">dhangadi</option>
+                        <option value="tumlingtar">tumlingtar</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputState">No. of beds</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option selected>1</option>
+                                <option selected>2</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="inputState">Total capacity</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>No. of adult</option>
+                                <option selected>1</option>
+                                <option selected>2</option>
+                                <option selected>3</option>
+                                <option selected>4</option>
+                                <option selected>5</option>
+                                <option selected>6</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Select Image</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <small id="namehelp" class="form-text text-muted">Select photo of respective room</small>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group mt-4" style="width: 150px;">
+                            <label>Actual Price (Rs.)</label>
+                            <input type="text" class="form-control" id="hotel_name" aria-describedby="emai">
+                            <small id="namehelp" class="form-text text-muted">Enter price per night</small>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="form-group mt-4" style="width: 150px;">
+                            <label>Discounted Price(Rs.)</label>
+                            <input type="text" class="form-control" id="hotel_name" aria-describedby="emai">
+                            <small id="namehelp" class="form-text text-muted">Enter price per night after
+                                discount</small>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button type="submit " style="border:orangered;background-color:orangered;"
+                    class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+    </div>
 </div>
+
+
+
+
+
+
 
 
 {% block hotelsuccess %}
