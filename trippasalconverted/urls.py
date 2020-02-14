@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
+from search.views import searchposts
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -25,6 +26,7 @@ urlpatterns = [
     path('',include('homepage.urls')),
     path('flight/',include('flight.urls')),
     path('addhotels/',include('hotels.urls')),
+     path('search/',searchposts,name='searchposts'),
     
 ]
 urlpatterns=urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
