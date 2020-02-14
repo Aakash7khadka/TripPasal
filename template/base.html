@@ -57,7 +57,7 @@
       <form class="form-inline my-2 my-lg-0"action="{% url 'searchposts' %}" method="GET" value="{{request.GET.q}}">
         <input class="form-control mr-sm-2" type="text" placeholder="Search for hotels" name="q" aria-label="Search" value="{{request.GET.q}}">
         
-        <button class="btn  my-2 my-sm-0" style="border-color:#4abcad;"type="submit">
+        <button class="btn  my-2 my-sm-0" style="border-color:#4abcad;" value="search" type="submit" name="submit">
           <i class="fas fa-search" style="color:#4abcad ;"></i>
         </button>
       </form>
