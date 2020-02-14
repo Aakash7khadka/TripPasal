@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import logout as auth_logout
+from hotels.models import hotels
+from flight.models import airlines
 
 def logout(request):
     """Logs out user"""
@@ -8,7 +10,12 @@ def logout(request):
 
 # Create your views here.
 def homepage(request):
-    return render(request,'home.html')
+    
+ 
+    plane=airlines.objects.order_by('price')[:5]
+
+    cheaphotels=hotels.objects.order_by('price')[:5]
+    return render(request,'home.html',{'plane':plane,'cheaphotels':cheaphotels})
 
 
 def hotel(request):
