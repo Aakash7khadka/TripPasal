@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Q
-from addBook.models import Book
+from hotels.models import hotels
 
 def searchposts(request):
     if request.method == 'GET':
@@ -9,9 +9,9 @@ def searchposts(request):
         submitbutton= request.GET.get('submit')
         print(submitbutton)
         if query is not None:
-            lookups= Q(bname__icontains=query) | Q(description__icontains=query)
+            lookups= Q(city__icontains=query) | Q(street__icontains=query)
 
-            results= Book.objects.filter(lookups).distinct()
+            results= hotels.objects.filter(lookups).distinct()
 
             context={'results': results,
                      'submitbutton': submitbutton}

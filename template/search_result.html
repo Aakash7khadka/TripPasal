@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="row">
+    <div class="container">
+
+        {% if submitbutton == 'search' and request.GET.q %}
+        {% if results %}
+        <h1>Results for <b>{{ request.GET.q }}</b></h1>
+        <br /><br />
+
+
+        {% for result in results %}
+        
+        {% include 'hotelcard.html' with obj=result %}
+
+        {% endfor %}
+    </div>
+
+</div>
+{% else %}
+<br><br>
+<h1>OOPS!! No search results for this query</h1><br><br>
+{% endif %}
+{% endif %}
+{% endblock %}
