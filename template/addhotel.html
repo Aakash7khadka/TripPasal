@@ -6,17 +6,17 @@
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         {% if request.user.is_superuser %}
-        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
             aria-controls="nav-home" aria-selected="true">Admin add hotel</a>
         {% endif %}
-        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+        <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
             aria-controls="nav-profile" aria-selected="false">Add Hotel</a>
 
     </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
     {% if request.user.is_superuser %}
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
 
         <div class="container">
@@ -124,7 +124,7 @@
         </div>
     </div>
     {% endif %}
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="tab-pane fade  show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         <div class="container mt-4 pb-4 pt-4"
             style="  box-shadow: 5px 10px 8px 10px #888888;width: 450px;background-color:white;border-radius:16px;">
             <h4 class="pl-2 pt-3" style="

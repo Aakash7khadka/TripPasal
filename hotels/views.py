@@ -98,7 +98,7 @@ def addnewhotels_trivago(request):
     return render(request,"addhotelsucessful.html")
 
 def trivago_ktm(getcity):
-    url="https://www.trivago.com/?aDateRange%5Barr%5D=2020-03-01&aDateRange%5Bdep%5D=2020-03-02&aPriceRange%5Bfrom%5D=0&aPriceRange%5Bto%5D=0&iRoomType=1&aRooms%5B0%5D%5Badults%5D=1&cpt2=66151%2F200&iViewType=0&bIsSeoPage=0&sortingId=1&slideoutsPageItemId=&iGeoDistanceLimit=16093&address=&addressGeoCode=&offset=0&ra=&settingsChanged=currency"
+    url="https://www.trivago.com/?aDateRange%5Barr%5D=2020-02-21&aDateRange%5Bdep%5D=2020-02-22&aPriceRange%5Bfrom%5D=0&aPriceRange%5Bto%5D=0&iRoomType=7&aRooms%5B0%5D%5Badults%5D=2&cpt2=66151%2F200&iViewType=0&bIsSeoPage=0&sortingId=1&slideoutsPageItemId=&iGeoDistanceLimit=16093&address=&addressGeoCode=&offset=0&ra="
     
         
     driver=webdriver.Firefox()
