@@ -2,6 +2,27 @@ from django.shortcuts import render
 from django.contrib.auth import logout as auth_logout
 from hotels.models import hotels
 from flight.models import airlines
+from django.views.generic import ListView,DetailView
+# Create your views here.
+
+class HotelDetailSlugView(DetailView):
+      queryset=hotels.objects.all()
+      template_name="detail.html"
+      def get_object(self,*args,**kwargs):
+        request=self.request
+        slug=self.kwargs.get('slug')
+       
+        try:
+            instance=hotels.objects.get(slug=slug)
+        except hotels.DoesNotExist:
+            raise Http404("Not found....")
+        except hotels.MultipleObjectsReturned:
+            qs=hotels.objects.filter(slug=slug,active=True)
+            instance=qs.first()
+        except:
+            raise Http404("Ummmm")
+        
+        return instance
 
 def logout(request):
     """Logs out user"""

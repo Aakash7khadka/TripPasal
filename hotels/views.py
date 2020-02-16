@@ -8,7 +8,7 @@ from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 from django.shortcuts import render
 from . models import hotels
-# Create your views here.
+
 
 def addnewhotels(request):
     getcity=request.GET['destination']
