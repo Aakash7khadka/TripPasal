@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
+    .card {
+        border: 1px solid #c9d0d878
+    }
+
+    .card-body ul li {
+        line-height: 1.8;
+        font-size: 14px
+    }
+
+    .color-dots span {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    /** Remove this - just for demo showcase**/
+    .container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media (min-width: 576px) {
+        .container {
+            max-width: 650px;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h2>
+            Simple Product cards
+        </h2>
+    </div>
+    <div class="row py-3">
+        <div class="col-lg-6 col-md-6 mb-4">
+            <!--Card-->
+            <div class="card" <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    class="card-img-top" alt="photo">
+            </div>
+            <!--Card content-->
+            <div class="card-body">
+                <!--Title-->
+                <h4 class="card-title font-weight-bold mb-2">Pair of brown leather boots beside bet</h4>
+                <div class="rating py-2">
+                    <i class="lnr lnr-star text-warning"></i>
+                    <i class="lnr lnr-star text-warning"></i>
+                    <i class="lnr lnr-star text-warning"></i>
+                    <i class="lnr lnr-star text-warning"></i>
+                    <i class="lnr lnr-star-half text-warning"></i>
+                </div>
+                <!-- //rating -->
+                <p class="card-text">Take Bootstrap 4 to the next level with official free themes and snippets. </p>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="lnr lnr-checkmark-circle text-primary mr-2"></i>Everything white and black
+                    </li>
+                    <li>
+                        <i class="lnr lnr-checkmark-circle text-primary mr-2"></i>More ram
+                    </li>
+                    <li>
+                        <i class="lnr lnr-checkmark-circle text-primary mr-2"></i>Better graphic card
+                    </li>
+                </ul>
+                <p class="card-text color-dots">
+                    Available in five different colors
+                    <br>
+                    <span class="d-inline-block rounded-circle bg-success"></span>
+                    <span class="d-inline-block rounded-circle bg-primary"></span>
+                    <span class="d-inline-block rounded-circle bg-secondary"></span>
+                    <span class="d-inline-block rounded-circle bg-dark"></span>
+                    <span class="d-inline-block rounded-circle bg-danger"></span>
+                </p>
+                <div class="text-right">
+                    <button class="btn btn-block btn-primary">
+                        Buy now
+                        <i class="lnr lnr-chevron-right pl-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent d-flex justify-content-between">
+                <span>Now
+                    <strong class="font-weight-bold">75% off</strong>
+                </span>
+                <div>
+                    <del class="text-muted mr-2">$300</del>
+                    <strong class="text-primary font-weight-bold">$75</strong>
+                </div>
+            </div>
+        </div>
+        <!--/.Card-->
+    </div>
+    <div class="col-lg-6 col-md-6 mb-4">
+        <!--Card-->
+        <div class="card shadow-sm">
+            <!--Card image-->
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    class="card-img-top" alt="photo">
+            </div>
+            <!--Card content-->
+            <div class="card-body">
+                <!--Title-->
+                <h4 class="card-title font-weight-bold mb-2">Pair of brown leather boots beside bet</h4>
+                <div class="rating py-2">
+                    <i class="lnr lnr-star text-warning"></i>
+                    <i class="lnr lnr-star text-warning"></i>
+                    <i class="lnr lnr-star text-warning"></i>
+                    <i class="lnr lnr-star text-warning"></i>
+                    <i class="lnr lnr-star-half text-warning"></i>
+                </div>
+                <!-- //rating -->
+                <p class="card-text">Take Bootstrap 4 to the next level with official free themes and snippets. </p>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="lnr lnr-checkmark-circle text-primary mr-2"></i>Everything white and black
+                    </li>
+                    <li>
+                        <i class="lnr lnr-checkmark-circle text-primary mr-2"></i>More ram
+                    </li>
+                    <li>
+                        <i class="lnr lnr-checkmark-circle text-primary mr-2"></i>Better graphic card
+                    </li>
+                </ul>
+                <p class="card-text color-dots">
+                    Available in five different colors
+                    <br>
+                    <span class="d-inline-block rounded-circle bg-success"></span>
+                    <span class="d-inline-block rounded-circle bg-primary"></span>
+                    <span class="d-inline-block rounded-circle bg-secondary"></span>
+                    <span class="d-inline-block rounded-circle bg-dark"></span>
+                    <span class="d-inline-block rounded-circle bg-danger"></span>
+                </p>
+                <div class="text-right">
+                    <button class="btn btn-block btn-primary">
+                        Buy now
+                        <i class="lnr lnr-chevron-right pl-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent d-flex justify-content-between">
+                <span>Now
+                    <strong class="font-weight-bold">75% off</strong>
+                </span>
+                <div>
+                    <del class="text-muted mr-2">$300</del>
+                    <strong class="text-primary font-weight-bold">$75</strong>
+                </div>
+            </div>
+        </div>
+        <!--/.Card-->
+    </div>
+</div>
+
+{% endblock}

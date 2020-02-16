@@ -45,79 +45,110 @@
           Flight</a>
         <a class="btn btn-light mx-3 " href="#" role="button"><i class="fas fa-taxi" style="color:#4abcad"></i> Find
           Cab</a>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-list-ul" style="color:#4abcad"></i> Services
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Hotels</a>
-            <a class="dropdown-item" href="#">Cab </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Restaurants</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0" action="{% url 'searchposts' %}" method="GET" value="{{request.GET.q}}">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search for hotels" name="q" aria-label="Search"
-          value="{{request.GET.q}}">
+        <!--modal start-->
 
-        <button class="btn  my-2 my-sm-0" style="border-color:#4abcad;" value="search" type="submit" name="submit">
-          <i class="fas fa-search" style="color:#4abcad ;"></i>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-light mx-3" data-toggle="modal" data-target="#exampleModalCenter">
+          <i class="far fa-list-alt" style="color:#4abcad"></i> Our Services
         </button>
-      </form>
 
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Our Services</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <button type="button" class="btn btn-light mx-2 my-2">
+                  <i class="far fa-list-alt" style="color:#4abcad"></i> <a href="{% url 'hotels' %}">Find Hotels</a>
+                </button>
+                <button type="button" class="btn btn-light mx-2 my-2">
+                  <i class="far fa-list-alt" style="color:#4abcad"></i> <a href="{% url 'flight' %}">Find Flights</a>
+                </button>
+                <button type="button" class="btn btn-light mx-2 my-2">
+                  <i class="far fa-list-alt" style="color:#4abcad"></i><a href="">Find Cabs</a>
+                </button>
+                <button type="button" class="btn btn-light mx-2 my-2">
+                  <i class="far fa-list-alt" style="color:#4abcad"></i> Our Services
+                </button>
 
-      {% if not user.is_authenticated %}
-      <!--modal-->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-danger ml-2" data-toggle="modal" data-target="#exampleModalCenter"
-        style="background:#ff491b ;border:#ff491b">
-        Sign UP
-      </button>
-
-      <!-- Modal -->
-
-      <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Sign in using</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-
-              <a class="btn  mx-2 " style="background-color:#ff491b;color:aliceblue"
-                href="{% url 'social:begin' 'google-oauth2' %}" role="button"><i class="fab fa-google"></i> Login with
-                Google</a>
-              <a class="btn  mx-2 " style="background-color:#24292e;color:aliceblue"
-                href="{% url 'social:begin' 'github' %}" role="button"><i class="fab fa-github"></i> Login with
-                GitHub</a>
-
-
-              <!--{% url 'social:begin' "google-oauth2" %}-->
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      {% endif %}
 
-      <!--modal-->
+        <!--modal end-->
+        <!--modal start-->
+        <form style="" class="form-inline  my-2 my-lg-0" action="{% url 'searchposts' %}" method="GET"
+          value="{{request.GET.q}}">
+          <input style="width:280px" class="form-control mr-sm-2 ml-4" type="text" placeholder="Search for hotels"
+            name="q" aria-label="Search" value="{{request.GET.q}}">
+
+          <button class="btn  my-2 my-sm-0" style="border-color:#4abcad;" value="search" type="submit" name="submit">
+            <i class="fas fa-search" style="color:#4abcad ;"></i>
+          </button>
+        </form>
 
 
-      {% if user.is_authenticated %}
+        {% if not user.is_authenticated %}
+        <!--modal-->
 
-      <a class="btn btn-primary mx-2" href="{% url 'logout' %}" role="button">{{user.get_username}}::Logout</a>
-      {% endif %}
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger ml-2" data-toggle="modal" data-target="#exampleModalCenter"
+          style="background:#ff491b ;border:#ff491b">
+          Sign UP
+        </button>
+
+        <!-- Modal -->
+
+        <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Sign in using</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <a class="btn  mx-2 " style="background-color:#ff491b;color:aliceblue"
+                  href="{% url 'social:begin' 'google-oauth2' %}" role="button"><i class="fab fa-google"></i> Login with
+                  Google</a>
+                <a class="btn  mx-2 " style="background-color:#24292e;color:aliceblue"
+                  href="{% url 'social:begin' 'github' %}" role="button"><i class="fab fa-github"></i> Login with
+                  GitHub</a>
+
+
+                <!--{% url 'social:begin' "google-oauth2" %}-->
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <!--modal-->
+
+
+        {% if user.is_authenticated %}
+
+        <a class="btn btn-primary mx-2" href="{% url 'logout' %}" role="button">{{user.get_username}}::Logout</a>
+        {% endif %}
     </div>
   </nav>
 

@@ -2,63 +2,111 @@
 
 
 {% block content %}
-    <div class="jumbotron jumbotron-fluid " style="height: 250px;background: 
+<div class="jumbotron jumbotron-fluid " style="height: 250px;background: 
     #ff491b;opacity: 0.9;">
-        <div class="container">
-            <h2 class="col-xm-5 col-md-4 ml-lg-0 text-light pl-0 ">Select best hotels from 1000 hotels...</h2>
-            <div class="row align-items-center">
-                <form class="form-inline  my-lg-0 ">
-                    
-                    <input
-                      class="form-control mr-sm-2 mt-4 ml-2"
-                      style="width: 250px;font-family:FontAwesome"
-                      type="search"
-                      placeholder="&#xf21d Destination"
-                      aria-label="Search"
-                    />
-                  
-                  
-                    <input type="text"  onfocus = "(this.type = 'date')"    class="form-control  mt-4 mr-2 ml-2"
-                    style="width: 180px;font-family:FontAwesome"
-                    type="search"
-                    placeholder="&#xf274 Check in"
-                    aria-label="Search" />
+  <div class="container">
+    <h2 class="col-xm-5 col-md-4 ml-lg-0 text-light pl-0 ">Select best hotels from 1000 hotels...</h2>
+    <div class="row align-items-center">
+      <form class="form-inline  my-lg-0 ">
 
-                    <input type="text"  onfocus = "(this.type = 'date')"    class="form-control  mt-4 mr-2 ml-2"
-                    style="width: 180px;font-family:FontAwesome"
-                    type="search"
-                    placeholder="&#xf274 Check out"
-                    aria-label="Search" />
-                    
-                    
+        <input class="form-control mr-sm-2 mt-4 ml-2" style="width: 250px;font-family:FontAwesome" type="search"
+          placeholder="&#xf21d Destination" aria-label="Search" />
 
-                    <div class="mysearch" >
-                    <button class="btn  btn-light my-2 my-sm-0 "  style="" type="submit">
-                      <i class="fas fa-search" style="color:#4abcad ;"></i> 
-                    </button>
-                </div>
-                  </form>
-                  </div>
-           </div>
-      </div>
-        
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
+        <input type="text" onfocus="(this.type = 'date')" class="form-control  mt-4 mr-2 ml-2"
+          style="width: 180px;font-family:FontAwesome" type="search" placeholder="&#xf274 Check in"
+          aria-label="Search" />
+
+        <input type="text" onfocus="(this.type = 'date')" class="form-control  mt-4 mr-2 ml-2"
+          style="width: 180px;font-family:FontAwesome" type="search" placeholder="&#xf274 Check out"
+          aria-label="Search" />
+
+
+
+        <div class="mysearch">
+          <button class="btn  btn-light my-2 my-sm-0 " style="" type="submit">
+            <i class="fas fa-search" style="color:#4abcad ;"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--Hotel description-->
+<div class="container" style="box-shadow: 10px 10px 8px 10px #888888;height:525px;width:50%">
+  <div class="row">
+    <div class="col mt-3">
+
+      <img style=" width: 300px;height:200"
+        src="https://images.oyoroomscdn.com/uploads/hotel_image/98189/medium/4ec9ea8d2cd487d9.jpg" alt="">
+
+    </div>
+    <div class="col mt-2">
+      <h4>OYO 776 Hotel R Valley View & Family Restaurant </h3>
+        <p>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+        </p>
+        <p>
+          <h6>Hotel details <small>&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Thamel Jyatha-9</small></h6>
+          <span>City: Kathmand</span><br>
+          <span>Street:Thamel, KTM</span><br>
+          <span>Contact: +977-9860466452</span><br>
+          <span>Email:bishalkan6a@gmail.com</span><br>
+
+
+        </p>
+
+    </div>
+  </div>
+  <hr>
+  <div class="row mt-1">
+    <div class="col">
+      <p>
+        <h6>Room details</h6>
+        <span>Number of beds: 1</span><br>
+        <span>Capacity: 1 person</span><br>
+        <span>Attached Bathroom: Not available !</span><br>
+        <span>AC: available</span><br>
+        <span>TV: available</span><br>
+
+
+      </p>
+
+    </div>
+    <div class="col">
+      <p>
+        <h6>Price Details</h6>
+        <p style="color: #f57224;font-size:large">Rs. 500 <small style="color: #888888;"> per night</small>
+        </p>
+
+
+
+
+      </p>
+
+    </div>
+
+  </div>
+  <button type="button" class="btn btn-light mx-3"><i class="fas fa-heart"></i></button>
+  <button type="button" class="btn btn-light mx-3"><i class="fas fa-share-alt-square"></i></button>
+  <button type="button" class="btn btn-light mx-3"><i class="fas fa-heart"></i></button>
+  <button type="button" class="btn btn-danger" style="margin-left: 46%;">Book Now</button>
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 {% endblock %}
