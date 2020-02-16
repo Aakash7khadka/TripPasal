@@ -1,51 +1,74 @@
 {% extends 'base.html' %}
 
-{% block head %} 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
- {% endblock %}
+
 
 
 {% block content %}
-{{object.hotel_title}}
 
-{{object.price}}
 
-<p>{{object.latitude}}</p>
-<p>{{object.longitude}}</p>
- <script>
-    var la;
-    var lo;
-      
-   navigator.geolocation.getCurrentPosition(function(position) {
-    la=document.getElementById("lat").innerHTML  
-    lo=document.getElementById("lon").innerHTML
-       
-       
-   
- var lat=la;
- var lon=lo;
-   
-   // position we will use later
-  
+<!--desc of hotel-->
+<div class="container" style="box-shadow: 10px 10px 8px 10px #888888;height:525px;width:50%">
+  <div class="row">
+    <div class="col mt-3">
 
-   // initialize map
-   map = L.map('mapDiv').setView([la, lo], 25);
+      <img style=" width: 300px;height:200"
+        src="https://images.oyoroomscdn.com/uploads/hotel_image/98189/medium/4ec9ea8d2cd487d9.jpg" alt="">
 
-   // set map tiles source
-   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-     maxZoom: 18,
-   }).addTo(map);
+    </div>
+    <div class="col mt-2">
+      <h4>{{object.hotel_title}}</h3>
+        <p>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+        </p>
+        <p>
+          <h6>Hotel details <small>&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> {{object.street}}</small></h6>
+          <span>City: {{object.city}}</span><br>
+          <span>Street:{{object.street}}</span><br>
+          <span>Contact: +977-9860466452</span><br>
+          <span>Email:bishalkan6a@gmail.com</span><br>
 
-   // add marker to the map
-   marker = L.marker([lat, lon]).addTo(map);
 
-   // add popup to the marker
-   marker.bindPopup("HERE").openPopup();
+        </p>
 
-});
- </script>
+    </div>
+  </div>
+  <hr>
+  <div class="row mt-1">
+    <div class="col">
+      <p>
+        <h6>Room details</h6>
+        <span>Number of beds: 1</span><br>
+        <span>Capacity: 1 person</span><br>
+        <span>Attached Bathroom: Not available !</span><br>
+        <span>AC: available</span><br>
+        <span>TV: available</span><br>
+
+
+      </p>
+
+    </div>
+    <div class="col">
+      <p>
+        <h6>Price Details</h6>
+        <p style="color: #f57224;font-size:large">Rs. 500 <small style="color: #888888;"> per night</small>
+        </p>
+
+
+
+
+      </p>
+
+    </div>
+
+  </div>
+  <button type="button" class="btn btn-light mx-3"><i class="fas fa-heart"></i></button>
+  <button type="button" class="btn btn-light mx-3"><i class="fas fa-share-alt-square"></i></button>
+  <button type="button" class="btn btn-light mx-3"><i class="fas fa-heart"></i></button>
+  <button type="button" class="btn btn-danger" style="margin-left: 46%;">Book Now</button>
+</div>
 
 
 {% endblock %}
