@@ -10,6 +10,14 @@ def showflight(request):
     plane=airlines.objects.filter(source=first_dest).filter(destination=second_dest).order_by('price').filter(departure_time__gte=first_time).filter(departure_time__lte=second_time)
 
     return render(request,"flightcomp.html",{'plane':plane})
+def show_flight(request):
+    first_dest=request.POST['first_dest']
+    second_dest=request.POST['second_dest']
+   
+    plane=airlines.objects.filter(source=first_dest).filter(destination=second_dest).order_by('price')
+
+    return render(request,"flightcomp.html",{'plane':plane})
+
 
 
     

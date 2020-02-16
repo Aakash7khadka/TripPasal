@@ -8,22 +8,25 @@
       <h1 class="display-4 text-dark">Find your destination</h1>
       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
         featured content or information.</p>
-      <form class="form-inline  my-lg-0 ">
+      
+      <form action="flight/show_flight" method="POST" class="form-inline  my-lg-0" >
+        {% csrf_token %}
+        
 
         <input class="form-control mr-sm-2 " style="width: 250px;font-family:FontAwesome" type="search"
-          placeholder="&#xf21d From" aria-label="Search" />
-      </form>
+          placeholder="&#xf21d From" aria-label="Search" name="first_dest"/>
+      
 
-      <form class="form-inline my-lg-0 ">
+      
         <input class="form-control  mt-4" style="width: 250px;font-family:FontAwesome" type="search"
-          placeholder="&#xf3c5 To " aria-label="Search" />
+          placeholder="&#xf3c5 To " aria-label="Search" name="second_dest" />
         <div class="mysearch">
           <button class="btn  btn-light my-2 my-sm-0 " style="" type="submit">
             <i class="fas fa-search" style="color:#4abcad ;"></i>
           </button>
         </div>
-      </form>
-
+      
+    </form>
 
     </div>
 
