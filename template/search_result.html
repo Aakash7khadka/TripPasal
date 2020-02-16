@@ -2,7 +2,7 @@
 
 
 {% block content %}
-{{results}}
+
 <div class="row">
     <div class="container">
 
@@ -13,7 +13,7 @@
 
 
         {% for result in results %}
-        
+
         {% include 'hotelcard.html' with obj=result %}
 
         {% endfor %}

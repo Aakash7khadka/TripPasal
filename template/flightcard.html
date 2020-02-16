@@ -17,18 +17,6 @@
       font-size: 22px;
     }
 
-    .card button {
-      border: none;
-      outline: 0;
-      padding: 12px;
-      color: white;
-      background-color: #ff491b;
-      text-align: center;
-      cursor: pointer;
-      width: 100%;
-      font-size: 18px;
-    }
-
     .card button:hover {
       opacity: 0.7;
     }
@@ -51,9 +39,13 @@
     <div class="card mx-2 my-4 ">
       {% if obj.airlines_name == "Yeti"  %}
       <img src="https://www.yetiairlines.com/file-manager/photos/2/1.jpg" alt="Yeti photo">
-      {% elif obj.airlines_name == "Buddha" %}
+      {% elif obj.airlines_name == "buddha" %}
       <img src="https://aviationnepal.com/wp-content/uploads/2017/03/2-Copy-Copy.jpg" alt="Yeti photo"
         style="max-width:300px;max-height:100px">
+      {% elif obj.airlines_name == "tara" %}
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ1EdS4nCsufIlkzcK3vkO_6gWq-6nrV_E9_pJn3yHPSp-PEEVC"
+        alt="Yeti photo" style="max-width:300px;max-height:100px">
       {% else %}
       <img src="" alt="" style="width:100%">
       {% endif %}
@@ -68,7 +60,9 @@
         <span class="text-muted" style="font-size: 15px;">{{obj.depart_time}}</span>
       </p>
 
-      <p><button>View Description</button></p>
+      <p><button class="btn btn-light btn-sm "><i class="fas fa-heart"></button></i><button type="button"
+          class="btn btn-primary btn-sm  ml-4">View</button>
+      </p>
     </div>
   </div>
 

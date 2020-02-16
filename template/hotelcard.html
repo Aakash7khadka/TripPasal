@@ -5,11 +5,12 @@
   <style>
     .card {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      max-width: 200px;
+      width: 200px;
       margin: auto;
-      text-align: center;
+      text-align: ;
       font-family: arial;
       float: left;
+      height: 350px;
     }
 
     .price {
@@ -17,17 +18,7 @@
       font-size: 22px;
     }
 
-    .card button {
-      border: none;
-      outline: 0;
-      padding: 12px;
-      color: white;
-      background-color: #ff491b;
-      text-align: center;
-      cursor: pointer;
-      width: 100%;
-      font-size: 18px;
-    }
+
 
     .card button:hover {
       opacity: 0.7;
@@ -49,23 +40,35 @@
 
   <div class="container mt-4">
     <div class="card mx-2 my-4 ">
-      
-      <img src={{obj.image}} alt="Yeti photo">
-     
-      <h3>{{obj.hotel_title}} <span class="text-muted" style="font-size: 15px;"></span></h3>
-      <p class="price"><span style="color:#ff491b;">Rs {{obj.price}}</span> per person
-        <br>
-        <span style="font-size: 12px;"><strike>Rs {{obj.cutprice}}</strike> -10%</span>
-      </p>
-      <p>City:{{obj.city}} <br>
-        Address: &nbsp;&nbsp;&nbsp;{{obj.street}}
-        <br>
-       
-      </p>
+      <div style="height: 300px;">
 
-      <p><button>View Description</button></p>
+        <img src={{obj.image}} alt="Yeti photo">
+
+        <h6 class="pt-2">{{obj.hotel_title}} <span class="text-muted" style="font-size: 15px;"></span></h6>
+        <p class="price"><span style="color:#ff491b;">Rs {{obj.price}}</span> per person
+
+        </p>
+        <p class="ml-3" style="text-align: left;">City:{{obj.city}} <br>
+          Address: &nbsp;&nbsp;&nbsp;{{obj.street}}
+          <br>
+        </p>
+      </div>
+
+      <p><button onclick="document.getElementById('favicon').style.color='red'" class="btn btn-light btn-sm "
+          id="fav"><i id="favicon" class="fas fa-heart "></button></i><button type="button"
+          class="btn btn-primary btn-sm  ml-4">View</button>
+      </p>
     </div>
   </div>
+
+  <script>
+
+  </script>
+
+
+
+  <!-- hotel card new-->
+
 
 </body>
 

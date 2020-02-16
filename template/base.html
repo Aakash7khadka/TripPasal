@@ -33,7 +33,8 @@
         <a class="btn btn-light mx-3 " href="{% url 'hotels' %}" role="button"><i class="fas fa-door-open "
             style="color:#4abcad"></i> Find
           Hotel</a>
-        <a class="btn btn-light mx-3 " href="{% url 'addhotels' %}" role="button"><i class="fas fa-folder-plus" style="color:#4abcad"></i>
+        <a class="btn btn-light mx-3 " href="{% url 'addhotels' %}" role="button"><i class="fas fa-folder-plus"
+            style="color:#4abcad"></i>
           Add
           Hotel</a>
         <a class="btn btn-light mx-3 " href="{% url 'flight' %}" role="button"><i class="fas fa-plane-departure"
@@ -54,9 +55,10 @@
           </div>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0"action="{% url 'searchposts' %}" method="GET" value="{{request.GET.q}}">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search for hotels" name="q" aria-label="Search" value="{{request.GET.q}}">
-        
+      <form class="form-inline my-2 my-lg-0" action="{% url 'searchposts' %}" method="GET" value="{{request.GET.q}}">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search for hotels" name="q" aria-label="Search"
+          value="{{request.GET.q}}">
+
         <button class="btn  my-2 my-sm-0" style="border-color:#4abcad;" value="search" type="submit" name="submit">
           <i class="fas fa-search" style="color:#4abcad ;"></i>
         </button>
@@ -92,9 +94,7 @@
               <a class="btn  mx-2 " style="background-color:#24292e;color:aliceblue"
                 href="{% url 'social:begin' 'github' %}" role="button"><i class="fab fa-github"></i> Login with
                 GitHub</a>
-              <a class="btn  mx-2 " style="background-color:#24292e;color:aliceblue"
-                href="{% url 'social:begin' 'facebook' %}" role="button"><i class="fab fa-github"></i> Login with
-                Facebook</a>
+
 
               <!--{% url 'social:begin' "google-oauth2" %}-->
 
