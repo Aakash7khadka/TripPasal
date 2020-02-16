@@ -63,161 +63,116 @@
 </div>
 
 
-<div class="container mt-4 ">
 
-  <h4 class="text-muted mt-4">Popular today</h4>
-  {% for obj in plane %}
-
-
-  {% include 'flightcard.html' with instance=obj %}
-
-  {% endfor %}
-
-
-
-
-
-
-
-</div>
-
-<div class="container mt-4">
-
-  <h4 class="text-muted">Popular Hotels today</h4>
-
-  {% for obj in cheaphotels %}
-
-
-  {% include 'hotelcard.html' with instance=obj %}
-
-  {% endfor %}
-
-
-</div>
-<script>
-  document.getElementById("fav").onclick = "document.getElementById('favicon').style.color = 'red"
-</script>
 
 <!---->
+
 <style>
-  .carousel-control-prev-icon {
-    background-size: 100px;
-    margin-top: 400px;
-    background-image: url("https://image.flaticon.com/icons/svg/2316/2316597.svg")
+  .carousel-control-next-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://image.flaticon.com/icons/svg/2316/2316674.svg');
   }
 
-  .carousel-control-next-icon {
-    background-size: 100px;
-    margin-top: 400px;
-    background-image: url("https://image.flaticon.com/icons/svg/2316/2316674.svg") !important;
+  .carousel-control-prev-icon {
+    margin-right: 60px;
+    height: 35px;
+    width: 35px;
+    background-image: url('https://image.flaticon.com/icons/svg/2316/2316597.svg');
   }
 </style>
 
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner carouselExampleControls">
+<div id="carouselExampleIndicators" style="height:500px;" class="carousel slide mt-4" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <span style="margin-left: 125px;font-size:larger">
+      Popular Hotels
+    </span>
     <div class="carousel-item active">
-      <div class="container mt-4">
+
+      {% for obj in cheaphotels %}
 
 
+      {% include 'hotelcard.html' with instance=obj %}
 
-        {% for obj in cheaphotels %}
-
-
-        {% include 'hotelcard.html' with instance=obj %}
-
-        {% endfor %}
-
-
-      </div>
+      {% endfor %}
     </div>
     <div class="carousel-item">
-      <div class="container mt-4">
-
-        {% for obj in cheaphotels %}
+      {% for obj in cheaphotels %}
 
 
-        {% include 'hotelcard.html' with instance=obj %}
+      {% include 'hotelcard.html' with instance=obj %}
 
-        {% endfor %}
-
-
-      </div>
+      {% endfor %}
     </div>
     <div class="carousel-item">
-      <div class="container mt-4">
-
-        {% for obj in cheaphotels %}
+      {% for obj in cheaphotels %}
 
 
-        {% include 'hotelcard.html' with instance=obj %}
+      {% include 'hotelcard.html' with instance=obj %}
 
-        {% endfor %}
-
-
-      </div>
+      {% endfor %}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
+    <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
 
+<!--Next slider for flights-->
+<div id="carousel-1" style="height:500px;margin-top:0px;" class="carousel slide" data-ride="carousel">
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner carouselExampleControls">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-1" data-slide-to="1"></li>
+    <li data-target="#carousel-1" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <span style="margin-left: 125px;font-size:larger">
+      Popular Daily Flights
+    </span>
     <div class="carousel-item active">
-      <div class="container mt-4">
+
+      {% for obj in plane %}
 
 
+      {% include 'flightcard.html' with instance=obj %}
 
-        {% for obj in cheaphotels %}
-
-
-        {% include 'hotelcard.html' with instance=obj %}
-
-        {% endfor %}
-
-
-      </div>
+      {% endfor %}
     </div>
     <div class="carousel-item">
-      <div class="container mt-4">
-
-        {% for obj in cheaphotels %}
+      {% for obj in plane %}
 
 
-        {% include 'hotelcard.html' with instance=obj %}
+      {% include 'flightcard.html' with instance=obj %}
 
-        {% endfor %}
-
-
-      </div>
+      {% endfor %}
     </div>
     <div class="carousel-item">
-      <div class="container mt-4">
-
-        {% for obj in cheaphotels %}
+      {% for obj in plane %}
 
 
-        {% include 'hotelcard.html' with instance=obj %}
+      {% include 'flightcard.html' with instance=obj %}
 
-        {% endfor %}
-
-
-      </div>
+      {% endfor %}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
+    <span class="sr-only" style="color:black;">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
