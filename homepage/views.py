@@ -35,7 +35,7 @@ def homepage(request):
  
     plane=airlines.objects.order_by('price')[:5]
 
-    cheaphotels=hotels.objects.order_by('price')[:5]
+    cheaphotels=hotels.objects.order_by('?')[:5]
     return render(request,'home.html',{'plane':plane,'cheaphotels':cheaphotels})
 
 
