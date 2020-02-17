@@ -1,0 +1,24 @@
+{% extends 'hotel.html' %}
+
+
+{% block showhotel %}
+
+{% if city == "ignore" %}
+{% else %}
+<h1>For {{city}}</h1>
+{% endif %}
+<div class="row">
+    <div class="container">
+
+       
+
+
+        {% for obj in hotelcity %}
+
+        {% include 'hotelcard.html' with instance=obj %}
+        
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

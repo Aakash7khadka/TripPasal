@@ -12,9 +12,9 @@
         <br /><br />
 
 
-        {% for result in results %}
+        {% for obj in results %}
 
-        {% include 'hotelcard.html' with obj=result %}
+        {% include 'hotelcard.html' with instance=obj %}
 
         {% endfor %}
     </div>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth import logout as auth_logout
 from hotels.models import hotels
 from flight.models import airlines
@@ -47,3 +47,29 @@ def addhotels(request):
 
 def flight(request):
     return render(request,'flight.html')
+
+def cityhotels(request):
+    citi=request.POST.get('cityhotel', False)
+    hotel=hotels.objects.all()
+    if(citi=="kathmandu"):
+        hotel=hotels.objects.filter(city="kathmandu")
+        
+    elif(citi=="pokhara"):
+        hotel=hotels.objects.filter(city="pokhara")
+    elif(citi=="biratnagar"):
+        hotel=hotels.objects.filter(city="biratnagar")
+    return render(request,"cityhotel.html",{'hotelcity':hotel,'city':citi})
+'''
+def all(request):
+    hotel=hotels.objects.all()
+    return render(request,"cityhotel.html",{'hotelcity':hotel})
+def kathmandu(request):
+    hotel=hotels.objects.all()
+    return render(request,"cityhotel.html",{'hotelcity':hotel})
+def pokhara(request):
+    hotel=hotels.objects.all()
+    return render(request,"cityhotel.html",{'hotelcity':hotel})
+def biratnagar(request):
+    hotel=hotels.objects.all()
+    return render(request,"cityhotel.html",{'hotelcity':hotel})
+    '''

@@ -11,6 +11,10 @@ urlpatterns=[
     path('logout/',views.logout,name="logout"),
     path('addhotels/',views.addhotels,name='addhotels'),
     re_path('view/(?P<slug>[\w-]+)/$',HotelDetailSlugView.as_view(),name='HotelDetailSlugView'),
-    
+    path('hotels/cityhotel',views.cityhotels,name='cityhotel'),
+    #path('all',views.all,name='all'),
+    #path('kathmandu',views.kathmandu,name='kathmandu'),
+    #path('pokhara',views.pokhara,name='pokhara'),
+    #path('biratnagar',views.pokhara,name='biratnagar'),
     
 ]
