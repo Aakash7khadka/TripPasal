@@ -36,7 +36,7 @@ def oyo_pkra(getcity):
 
         for container in containers:
             try:
-                container=containers[0]
+                
                 title=container.h3["title"]
                 price_container=container.findAll("span",{"class":"listingPrice__finalPrice"})
                 price=price_container[0].text
@@ -73,7 +73,7 @@ def oyo_ktm(getcity):
 
         for container in containers:
             try:
-                container=containers[0]
+                
                 title=container.h3["title"]
                 price_container=container.findAll("span",{"class":"listingPrice__finalPrice"})
                 price=price_container[0].text
